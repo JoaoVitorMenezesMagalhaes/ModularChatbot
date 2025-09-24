@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - namespace.yaml
+  - secrets.yaml
+  - redis-deployment.yaml
+  - backend-deployment.yaml
+  - frontend-deployment.yaml
+  - ingress.yaml
+
+commonLabels:
+  app.kubernetes.io/name: modular-chatbot
+  app.kubernetes.io/version: "1.0.0"
+  app.kubernetes.io/component: chatbot
+
+images:
+  - name: modular-chatbot-backend
+    newTag: latest
+  - name: modular-chatbot-frontend
+    newTag: latest
