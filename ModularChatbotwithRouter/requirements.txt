@@ -1,0 +1,15 @@
+langchain
+langchain-community
+langchain-openai
+requests
+beautifulsoup4
+python-dotenv
+pydantic
+fastapi
+uvicorn
+redis
+uuid
+pytest
+pytest-asyncio
+httpx
+pytest-mock
